@@ -1,0 +1,27 @@
+# ODE
+
+v'=(f(V)-w+I)/c
+w'=(a*(v-el)-w)/tauw
+
+f(v)=-gl*(v-el)+gl*delta*exp((v-vt)/delta)
+
+# parameters for cell 1
+par c=268, i=-90, gl=8.47, taum=31.64
+par el=-51.31, vt=-53.23
+par delta=0.85, vreset=-60.35
+par a=37.79, tauw=20.76, b=441.12
+
+par vspike=0
+
+# look for events
+global 1 v-vspike { v=vreset; w=w+b}
+
+# start them at rest
+init v=-60.35
+init w=0
+
+@ BOUND=10000
+@ METH=euler
+@ TOTAL=100
+
+done

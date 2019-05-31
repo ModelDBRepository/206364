@@ -1,0 +1,45 @@
+N=500; %ms
+trial=20;
+
+dt=0.1; %ms
+
+n_spike=0;
+sum=0;
+
+dsigma=1;
+
+sigma=1;  %initial variation
+
+sigmax=100;
+cormax=2;
+
+c=217; 
+i=0; 
+gl=12.8;
+el=-55.144; 
+vt=-56.252;
+delta=0.77; 
+vreset=-68;
+vs=0; 
+gs=0.01;
+
+a=35.4; tauw=7.5; b=323;
+
+% dendritic filtering
+tauc=0.15;  % ms
+taus=15;
+p=0.021;
+
+%gc=p*(p-1)*(c/taus-c/tauc);      % nS
+gc=0, 0.1, 0.2, 0.5, 1;
+
+
+v(1)=-68;
+vd(1)=-68;
+w(1)=0;
+t(1)=0;
+input(1)=0;
+
+vspike=0;
+Ihold= -80,-90,-100;
+

@@ -1,0 +1,9 @@
+Instructions
+
+it is attached. Please unpack the archive. Then use the Terminal to go to the DSB94 directory and say
+
+nrnivmodl
+nrngui DS2M0Purk.hoc
+
+This is an example run and will generate the voltage response to a 1000 ms, 1.5 nA current pulse at the soma.
+Let me know if you have questions how to modify the run() and metarun() procedures to suit our needs.
